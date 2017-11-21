@@ -43,14 +43,14 @@ defmodule NeoscanWeb.Router do
     post "/", HomeController, :search
   end
 
-  scope "/api/main_net/v1", NeoscanWeb do
+  scope "/api/test_net/v1", NeoscanWeb do
     pipe_through :api
 
     get "/get_balance/:hash", ApiController, :get_balance
     get "/get_claimed/:hash", ApiController, :get_claimed
     get "/get_unclaimed/:hash", ApiController, :get_unclaimed
     get "/get_claimable/:hash", ApiController, :get_claimable
-    get "/get_address/:hash", ApiController, :get_address
+    get "/get_address/:hash", ApiController, :get_addresss
     get "/get_assets", ApiController, :get_assets
     get "/get_asset/:hash", ApiController, :get_asset
     get "/get_block/:hash", ApiController, :get_block

@@ -1,6 +1,6 @@
 
 <!-- Welcome -->
-<h1 class="content-title"><%= gettext "Welcome to NEOSCAN" %></h1>
+<h1 class="content-title"><%= gettext "Welcome to NEOSCAN TESTNET" %></h1>
 <p class="content-subline"><%= gettext "Your home for all NEO related blockchain information" %></p>
 
 <!-- Search input -->
