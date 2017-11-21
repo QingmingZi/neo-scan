@@ -65,18 +65,12 @@ defmodule NeoscanSync.Producer do
     end
   end
 
-  #cross check block hash between different seeds
+  #cross check block hash between different seeds REMOVED CROSS CHECK IN TESTNET
   defp cross_check(height) do
     nodes = check_if_nodes(2)
     if  nodes != nil do
-      [random1, random2] = nodes
-      block_a = get_block_by_height(random1, height)
-      block_b = get_block_by_height(random2, height)
-      if block_a == block_b do
-        block_a
-      else
-        cross_check(height)
-      end
+      [random1, _random2] = nodes
+      get_block_by_height(random1, height)
     else
       cross_check(height)
     end

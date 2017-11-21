@@ -70,9 +70,8 @@
 
 
         <section id="moduledoc">
-          <p>  Main API for accessing data from the explorer.
-  All data is provided through GET requests in <code class="inline">/api/main_net/v1</code>.
-  Testnet isn’t currently available.</p>
+          <p>  Testnet API for accessing data from the explorer.
+  All data is provided through GET requests in <code class="inline">/api/test_net/v1</code>.</p>
 
         </section>
 
@@ -280,7 +279,7 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_address/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_address/{hash_string}
 {
   &quot;txids&quot;: [
     {
@@ -355,7 +354,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_all_nodes
+<pre><code class="elixir">/api/test_net/v1/get_all_nodes
       [
         {
           &quot;url&quot;: &quot;http://seed1.cityofzion.io:8080&quot;,
@@ -386,7 +385,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_asset/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_asset/{hash_string}
 {
   &quot;type&quot;: &quot;type_string&quot;,
   &quot;txid&quot;: &quot;tx_id_string&quot;,
@@ -426,7 +425,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_assets
+<pre><code class="elixir">/api/test_net/v1/get_assets
 [
   {
     &quot;type&quot;: &quot;type_string&quot;,
@@ -469,7 +468,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_balance/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_balance/{hash_string}
 {
   &quot;balance&quot;: [
     {
@@ -512,8 +511,8 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_block/{hash_string}
-/api/main_net/v1/get_block/{height}
+<pre><code class="elixir">/api/test_net/v1/get_block/{hash_string}
+/api/test_net/v1/get_block/{height}
 {
   &quot;version&quot;: integer,
   &quot;tx_count&quot;: integer,
@@ -559,7 +558,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_claimable/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_claimable/{hash_string}
 {
   &quot;claimable&quot;: [
     {
@@ -597,7 +596,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_claimed/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_claimed/{hash_string}
 {
   &quot;claimed&quot;: [
     {
@@ -637,7 +636,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_fees_in_range/500-1000
+<pre><code class="elixir">/api/test_net/v1/get_fees_in_range/500-1000
 {
   &quot;total_sys_fee&quot;: 0,
   &quot;total_net_fee&quot;: 0
@@ -666,7 +665,7 @@ working nodes.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_height
+<pre><code class="elixir">/api/test_net/v1/get_height
 {
   &quot;height&quot;: 1239809
 }</code></pre>
@@ -693,7 +692,7 @@ working nodes.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_highest_block
+<pre><code class="elixir">/api/test_net/v1/get_highest_block
 {
   &quot;version&quot;: integer,
   &quot;tx_count&quot;: integer,
@@ -739,7 +738,7 @@ working nodes.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_last_blocks</code></pre>
+<pre><code class="elixir">/api/test_net/v1/get_last_blocks</code></pre>
 <p>   [</p>
 <pre><code class="elixir">  {
     &quot;version&quot;: integer,
@@ -789,8 +788,8 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_last_transactions/{type}
-/api/main_net/v1/get_last_transactions
+<pre><code class="elixir">/api/test_net/v1/get_last_transactions/{type}
+/api/test_net/v1/get_last_transactions
 [{
     &quot;vouts&quot;: [
       {
@@ -859,7 +858,7 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_nodes
+<pre><code class="elixir">/api/test_net/v1/get_nodes
 {
   &quot;urls&quot;: [
     &quot;http://seed1.cityofzion.io: 8080&quot;,
@@ -889,7 +888,7 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_transaction/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_transaction/{hash_string}
 {
   &quot;vouts&quot;: [
     {
@@ -956,7 +955,7 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_unclaimed/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_unclaimed/{hash_string}
 {
   &quot;unclaimed&quot;: float,
   &quot;address&quot;: &quot;hash_string&quot;
